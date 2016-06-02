@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<input>
+    <businessobject type="View Access">
+        <businesscomponent type="Feature Access" mode="upsert" viewmode="All">
+            <fields>
+                <field name="Name" iskey="true" />
+                <field name="Description" />
+                <field name="Local Access" />
+                <field name="Read Only View" />
+                <field name="Auto Smart Script Name" />
+                <field name="Responsibility View Local Access" />
+            </fields>
+        </businesscomponent>
+    </businessobject>
+</input>

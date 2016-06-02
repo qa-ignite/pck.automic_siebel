@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="ISO-8859-15"?>
+<uc-export clientvers="11.0.0-dev+build.2771">
+<DOCU name="PCK.AUTOMIC_SIEBEL.PUB.DOC">
+<HEADER state="1">
+<Title>Siebel Package documentation</Title>
+<ArchiveKey1/>
+<ArchiveKey2/>
+<OH_SubType/>
+</HEADER>
+<DOCU_Docu state="1" type="text">
+<DOC><![CDATA[About Automic's Siebel Package
+==============================
+
+The Siebel Offering speeds up the deployment of Siebel applications. It also reduces downtime and increases agility of Siebel environments.
+
+A Siebel solution is tailored to a customer's business and eBusiness strategies and processes. Therefore you will find numerous configurations within Siebel and integrations with other systems.
+
+When you want to bring a Siebel application from one environment to another, this Automic Offering comes in and helps you to move forward efficiently.
+
+Our templates full of helpful actions cure the deployment pains as we automate manual operation steps. The Siebel specific actions use Siebel's own tools and their API (DataBeans) to interact with various Siebel components.]]></DOC>
+</DOCU_Docu>
+</DOCU>
+</uc-export>

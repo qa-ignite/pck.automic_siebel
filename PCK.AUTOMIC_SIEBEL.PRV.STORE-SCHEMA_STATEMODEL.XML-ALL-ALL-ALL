@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<input>
+    <businessobject type="State Model">
+        <businesscomponent type="State Model" mode="upsert" viewmode="All">
+            <fields>        		
+		<field name="State Name"/>
+		<field name="Activation Date/Time"/>
+                <field name="BusComp Name" iskey="true" />
+                <field name="Created By Name" />
+                <!--<field name="Default State Id" /-->
+                <field name="Description" />
+                <field name="Expiration Date/Time" />
+                <field name="Field Name" />
+                <field name="Name" iskey="true"/>
+                <!--<field name="State Description" /-->
+                
+
+                <!--field name="State Restrict Delete Flag" /-->
+                <!-- field name="State Restrict Transition Flag" /-->
+                <!-- field name="State Restrict Update Flag" /-->
+            </fields>
+	    <children>
+			<businesscomponent type="State Model - State" mode="upsert" parentkey="Id" childkey="State Model Id" viewmode="All">
+				<fields>
+					<field name="State Name" iskey="true"/>
+					<field name="Description"/>
+					<field name="Restrict Delete Flag"/>
+					<field name="Restrict Transition Flag"/>
+					<field name="Restrict Update Flag"/>
+				</fields>
+			</businesscomponent>
+			<businesscomponent type="State Model - Transition" mode="upsert" parentkey="Id" childkey="State Model Id" viewmode="All">
+				<fields>
+					<field name="Description"/>
+					<field name="From State Name" iskey="true"/>					
+					<field name="Public Flag"/>
+					<field name="Rule Expression"/>
+					<field name="Rule Expression - Simple"/>
+					<field name="Rule Field Name"/>
+					<field name="Rule Operator"/>
+			                <field name="Rule Value"/>
+			                <field name="State Model BusComp Name"/>
+			                <field name="To State Name" iskey="true"/>
+				</fields>
+				<children>
+					<businesscomponent type="Position" mode="upsert" mvf="Position Id" parentkey="Position Id" childkey="Id" viewmode="All">
+						<fields>
+							<field name="Name" iskey="true"/>
+							<field name="Division" iskey="true"/>
+							<field name="Description" />
+						</fields>
+					</businesscomponent>
+				</children>
+			</businesscomponent>
+	    </children>
+        </businesscomponent>
+    </businessobject>
+</input>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<input>
+    <businessobject type="FINS Validation">
+        <businesscomponent type="FINS Validation Rule Set" mode="upsert" viewmode="All">
+            <fields>
+                <field name="Name" iskey="true"/>
+                <field name="Business Component" iskey="true"/>
+                <field name="Aggregate Error Flag"/>
+                <field name="Business Object"/>
+                <field name="Call Name"/>
+                <field name="Conditional Expr"/>
+                <field name="Description"/>
+                <field name="Edit Flag"/>
+                <field name="End Date"/>
+                <field name="Group"/>              
+                <field name="Start Date"/>
+                <field name="Status"/>
+                <field name="Version"/>
+                <field name="View"/>
+            </fields>
+        </businesscomponent>
+    </businessobject>
+</input>

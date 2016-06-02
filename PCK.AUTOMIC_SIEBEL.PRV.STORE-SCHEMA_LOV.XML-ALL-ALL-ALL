@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<input>
+    <businessobject type="List Of Values">
+        <businesscomponent type="List Of Values" mode="upsert" viewmode="All">
+            <fields>             
+                <field name="Active"/>
+                <field name="Bitmap"/>
+                <field name="Class Code"/>
+                <field name="Description"/>
+                <field name="High"/>
+                <field name="Language"/>
+                <field name="Language Name"/>
+                <field name="Low"/>
+                <field name="Modifiable"/>
+                <field name="Multilingual"/>
+                <field name="Name"/>
+                <field name="Order By"/>
+                <field name="Parent"/>
+                <field name="Replication Level"/>
+                <field name="Sub Type"/>
+                <field name="Target High"/>
+                <field name="Target Low"/>
+                <field name="Translate"/>
+                <field name="Type" iskey="true"/>
+                <field name="Value" iskey="true"/>
+                <field name="Weighting Factor"/>       
+            </fields>
+        </businesscomponent>
+    </businessobject>
+</input>

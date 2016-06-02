@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<input>
+    <businessobject type="Responsibility">
+        <businesscomponent type="Responsibility" mode="upsert" viewmode="All">
+            <fields>
+                <field name="Name" iskey="true" />
+                <field name="Description" />
+                <field name="Access Type" />
+                <field name="Integration Id" />            
+            </fields>
+            <children>
+                <businesscomponent type="Feature Access" mode="upsert" viewmode="All" mvf="View" parentkey="View" childkey="Name">
+                    <fields>
+                        <field name="Name" iskey="true" />
+                        <field name="Description" />
+                    </fields>
+                </businesscomponent>
+                <businesscomponent type="Access Controlled Task" mode="upsert" mvf="Task Name" viewmode="All" parentkey="Task Name" childkey="Name">
+                    <fields>
+                        <field name="Name" iskey="true" />
+                        <field name="Description" />
+                    </fields>
+                </businesscomponent>
+                <businesscomponent type="Organization" mode="upsert" mvf="Organization" viewmode="All" parentkey="Organization" childkey="Name">
+                    <fields>
+                        <field name="Name" iskey="true" />
+                        <field name="Organization Flag"/>
+                    </fields>
+                </businesscomponent>
+            </children>
+        </businesscomponent>
+    </businessobject>
+</input>

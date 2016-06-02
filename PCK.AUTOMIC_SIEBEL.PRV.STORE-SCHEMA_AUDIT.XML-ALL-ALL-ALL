@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<input>
+    <businessobject type="Audit Trail Admin">
+        <businesscomponent type="Audit Trail Buscomp" mode="upsert" viewmode="All" >
+            <fields>
+                <field name="Assoc Flag"/>
+                <field name="Buscomp" iskey="true"/>
+                <field name="Buscomp Base Table Name"/>
+                <field name="Comments"/>
+                <field name="Copy Flag"/>
+                <field name="Delete Flag"/>
+                <field name="End Date"/>
+                <field name="Export Flag"/>
+                <field name="New Flag"/>
+                <field name="Restriction Type"/>
+                <field name="Start Date"/>
+                <field name="System Audited Flag"/>
+                <field name="Update Flag" />
+            </fields>
+            <children>
+                <businesscomponent type="Audit Trail Responsibility" mode="upsert" parentkey="Buscomp" childkey="Audit BC Name" viewmode="All">
+                    <fields>
+                        <field name="Responsibility" iskey="true" plf="Name"/>
+                    </fields>
+                    <children>
+                        <businesscomponent type="Responsibility" mode="upsert" parentkey="Responsibility" childkey="Name"  viewmode="All">
+                            <fields>
+                                <field name="Name" iskey="true"/>
+                                <field name="Description"/>
+                            </fields>
+                        </businesscomponent>
+                    </children>
+                </businesscomponent>
+                  
+                <businesscomponent type="Audit Trail Child Buscomp" parentkey="Buscomp" childkey="Audit Business Component"   mode="upsert" viewmode="All">
+                    <fields>
+                        <field name="Child Buscomp" iskey="true"/>
+                        <field name="Audit Business Component" iskey="true"/>
+                        <field name="Link Name"/>
+                        <field name="Many to Many Flag"/>
+                        <field name="Parent FK Column Name"/>
+                        <field name="System Audited Flag"/>
+                        <field name="Table Name"/>
+                    </fields>           
+                </businesscomponent>
+                  
+                <businesscomponent type="Audit Trail Position" mode="upsert" parentkey="Buscomp" childkey="Audit BC Name" viewmode="All">
+                    <fields>            
+                        <field name="Position" iskey="true" plf="Name"/>
+                    </fields>
+                    <children>
+                        <businesscomponent type="Position" mode="upsert" parentkey="Position" childkey="Name" viewmode="All">
+                            <fields>
+                                <field name="Name" iskey="true"/>
+                                <field name="Division" />
+                                <field name="Description" />
+                            </fields>
+                        </businesscomponent>
+                    </children>
+                </businesscomponent>
+            </children>
+        </businesscomponent>
+    </businessobject>
+</input>
